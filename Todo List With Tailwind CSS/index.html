@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--! Tailwind CSS CDN  -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Yapılacaklar Listesi</title>
+</head>
+
+<body class="bg-linear-to-l from-blue-500 to-pink-500">
+
+    <h1 class="text-5xl my-30 text-center">Yapılacaklar Listesi</h1>
+
+    <div class="container mx-auto w-1/2">
+        <form>
+            <div class="border flex">
+                <input type="text" placeholder="Yapılacaklar..." class="w-full p-3 relative z-90" id="to-input">
+                <button type="submit" class="border-l px-6 bg-green-500 text-white" id="todo">Ekle</button>
+            </div>
+
+            <div class="flex justify-end my-5">
+                <button class="p-3 bg-red-400 text-white" onclick="cleanTo()">Temizle</button>
+            </div>
+
+            <ul class="border p-6 flex flex-col gap-y-5" id="toul">
+                <!-- <li class="flex justify-between border px-4 py-5 flex items-center justify-between">
+                    <span></span>
+                    <button class="text-red-400">Sil</button>
+                </li> -->
+            </ul>
+
+        </form>
+    </div>
+
+    <script>
+        const txtToInput = document.getElementById("to-input");
+        const btnaddTodo = document.querySelector("#todo");
+        const addtoul = document.querySelector("#toul");
+
+
+        let txtValue = "";
+        let toul = [];
+
+        txtToInput.addEventListener("change", function (e){
+            txtValue = e.target.value;
+        });
+
+        btnaddTodo.addEventListener("click",addTodo);
+
+        function addTodo(e){
+            e.preventDefault();
+            toul.unshift({id: toul.length + 1, todoTitle: txtValue});
+            txtToInput.value = "";
+            displayToul();
+        }
+
+        function displayToul(){
+            let result = "";
+
+            if(toul.length === 0){
+                toul.innerHTML = "Liste Boş!";
+            } else {
+                toul.forEach((item) =>{
+                    result += `<li class="flex justify-between border px-4 py-5 flex items-center justify-between">
+                    <span>${item.todoTitle}</span>
+                    <button class="text-red-400" onclick="deleteToul(${item.id})">Sil</button>
+                    </li>  
+                    `
+                });
+            }
+
+            addtoul.innerHTML = result;
+        }
+
+        function deleteToul(id){
+            let deletedId;
+
+            for(let index in toul){
+                if(toul[index].id == id){
+                    deletedId = index;
+                }
+            }
+
+            toul.splice(deletedId,1);
+            displayToul();
+        }
+
+        function cleanTo(){
+            toul.splice(0,toul.length);
+            displayToul();
+        }
+
+        displayToul();
+    </script>
+
+</body>
+
+</html>
