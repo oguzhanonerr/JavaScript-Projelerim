@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Film Sitesi Örneği - Filmler</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-gray-700 text-white flex justify-between items-center p-6">
+        <div class="text-2xl font-bold">🎬 Film Sitesi</div>
+        <div>
+            <a href="anaSayfa.html" class="mx-2 hover:underline">Ana Sayfa</a>
+            <a href="index.html" class="mx-2 hover:underline">Filmler</a>
+            <a href="iletisim.html" class="mx-2 hover:underline">İletişim</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4">
+        <button id="filter" class="bg-sky-500 text-white px-4 py-2 rounded-xl hover:bg-sky-600">Filtrele</button>
+
+        <div class="filter-buttons">
+            <button onclick="filterfilms('')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded-xl hover:bg-gray-900">Tüm Filmler</button>
+            <button onclick="filterfilms('korku')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded-xl hover:bg-gray-900">Korku</button>
+            <button onclick="filterfilms('komedi')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded-xl hover:bg-gray-900">Komedi</button>
+            <button onclick="filterfilms('aksiyon')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded-xl hover:bg-gray-900">Aksiyon</button>
+            <button onclick="filterfilms('animasyon')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded-xl hover:bg-gray-900">Animasyon</button>
+            <button onclick="filterfilms('bilimKurgu')" class="bg-gray-700 text-white px-4 py-2 m-1 rounded-xl hover:bg-gray-900">Bilim Kurgu</button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-7 gap-4 mt-4" id="filmlists">
+            <div class="film bg-white shadow-md rounded p-4" data-genre="korku">
+                <img src="imgs/conjuring1.jpg" alt="korku" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Korku Filmi</h3>
+                <p class="text-gray-700 ">Konusunu gerçek bir hikayeden alan Korku Seansı, doğaüstü olayları inceleyip
+                    aydınlatmaya çalışan dünyaca ünlü çift Ed ve Lorraine Warren'ın karşılaştıkları ürkütücü bir vakayı
+                    ele alır.</p>
+                <a href="https://www.youtube.com/watch?v=k10ETZ41q5o&pp=ygUTY29uanVyaW5nIDEgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="animasyon">
+                <img src="imgs/buzdevri1.jpg" alt="animasyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Animasyon Filmi</h3>
+                <p class="text-gray-700 ">Dünya'nın buzla kaplanmaya başladığı dönemde, Buzul Çağı'nda bir mamut, bir
+                    kılıç dişli kaplan, bir miskin ve bir bebeğin maceralarını anlatıyor.</p>
+                <a href="https://www.youtube.com/watch?v=wjdqn9r4thg" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="korku">
+                <img src="imgs/conjuring2.jpg" alt="korku" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Korku Filmi</h3>
+                <p class="text-gray-700 ">Warren’lar, hayret verici doğaüstü araştırmalarına, kötü niyetli bir ruhun
+                    dört çocuk büyüten bekar bir annenin evine dadanması üzerine, aileye yardım eli uzatmak için Kuzey
+                    Londra’ya doğru yola koyuluyorlar.</p>
+                <a href="https://www.youtube.com/watch?v=VFsmuRPClr4&pp=ygUTY29uanVyaW5nIDIgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="korku">
+                <img src="imgs/conjuring3.jpg" alt="korku" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Korku Filmi</h3>
+                <p class="text-gray-700 ">Korku Seansı 3: Katil Şeytan, şeytan tarafından ele geçirildiği düşünüldüğü
+                    bir gencin cinayet zanlısı olduğu davayı araştırırken daha korkunç bir sırrın açığa çıkmasını
+                    sağlayan paranomal davaları çözmeye çalıştıran Ed ve Lorraine Warren'ın hikayesini konu ediyor.</p>
+                <a href="https://www.youtube.com/watch?v=h9Q4zZS2v1k&pp=ygUTY29uanVyaW5nIDMgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/killbill1.jpeg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Eski patronu ve onun suç örgütü tarafından düğününde öldüresiye dövülen, 4 yıl
+                    boyunca komada yatan ''Gelin'' adlı kadının hikayesini konu alıyor.</p>
+                <a href="https://www.youtube.com/watch?v=7kSuas6mRpk&pp=ygUTa2lsbCBiaWxsIDEgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="korku">
+                <img src="imgs/kötüruh.jpg" alt="korku" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Korku Filmi</h3>
+                <p class="text-gray-700 ">Yıllar içinde birbirlerinden uzaklaşan iki kardeşin hayatına odaklanıyor.
+                    Zamanla birbirlerinden uzaklaşan iki kardeş, aradan geçen yılların ardından yeniden bir araya gelir.
+                    Ancak büyük bir tehlike onları beklemektedir çünkü et yiyen kötü ruhlar canlanmıştır</p>
+                <a href="https://www.youtube.com/watch?v=smTK_AeAPHs&pp=ygUYZXZpbCBkZWFkICByaXNlIHRyYWlsZXIg"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="komedi">
+                <img src="imgs/salakavanak.jpg" alt="komedi" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Komedi Filmi</h3>
+                <p class="text-gray-700 ">Llyod Christmas ve Harry Dunne kirli ve dağınık bir evde yaşıyan, sık sık
+                    işlerinden kovulan birbirinden avanak iki arkadaştır. Llyod Rhode Island’da limuzin şöförlüğü
+                    yapmakta iken bir gün güzel ve zengin bir kadın olan Mary Swanson’ı havaalanına götürür, bu esnada
+                    ona aşık olur. Mary havaalanında bir çanta unutur, çantayı alan Llyod Mary’nin gözüne girme umuduyla
+                    çantasını ona geri götürmeyi kafasına koyar.</p>
+                <a href="https://www.youtube.com/watch?v=l13yPhimE3o&pp=ygUTZHVtYiBkdW1iZXIgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="animasyon">
+                <img src="imgs/shrek1.jpg" alt="animasyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Animasyon Filmi</h3>
+                <p class="text-gray-700 ">Shrek, oldukça korkutucu bir görünüme sahip, devasa, yeşil bir troldür.
+                    Yalnızlığın getirisiyle, hayatının geri kalanını beraber geçirebileceği, en az kendisi kadar çirkin
+                    bir yaratık bulmanın hevesindedir. Bir kahin, kehanetini açıklar. Şrek ile güzeller güzeli bir
+                    prenses olan Fiona arasında duygusal bir ilişki cereyan edecektir.</p>
+                <a href="https://www.youtube.com/watch?v=CwXOrWvPBPk" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="bilimKurgu">
+                <img src="imgs/inception.jpg" alt="bilimKurgu" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Bilim Kurgu Filmi</h3>
+                <p class="text-gray-700 ">Dom Cobb uzmanlık alanı, zihnin en karanlık ve savunmasız olduğu rüya görme
+                    anında, bilinçaltının derinliklerindeki değerli sırları çekip çıkarmak ve onları çalmaktır. Cobb'un
+                    bu nadir insanlarda görülebilecek yeteneği, bu ender rastgelinebilecek mahareti, onu kurumsal
+                    casusluğun tehlikeli yeni dünyasında aranan bir oyuncu yapmıştır.</p>
+                <a href="https://www.youtube.com/watch?v=YoHD9XEInc0&pp=ygURaW5jZXB0aW9uIHRyYWlsZXI%3D" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="komedi">
+                <img src="imgs/homealone.jpg" alt="komedi" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Komedi Filmi</h3>
+                <p class="text-gray-700 ">Kevin, ailesi Fransa’ya tatile giderken yanlışlıkla evde unutulur. Yalnız
+                    kaldığını farkettiği anda, evini de hırsızlara karşı korumak zorunda kalacağını anlar.
+                    Harry ve Marv’ın niyeti, Kevin’in mahallesindeki tüm evleri soymaktır. Kevin’in evinin kolay lokma
+                    olmayacağını acı deneyimlerle öğreneceklerdir.</p>
+                <a href="https://www.youtube.com/watch?v=jEDaVHmw7r4&pp=ygUSaG9tZSBhbG9uZSB0cmFpbGVy" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/taşıyıcı1.jpg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Frank, hayatının bir kısmını bir özel operasyon biriminin önemli bir parçası
+                    olarak geçirmiştir. Artık bir paralı askerdir ve hangi görevi beğeniyorsa onu yerine getirmektedir.
+                    Üç adet altın kuralı vardır. Frank, anlaşmanın bozulmasından; kim için çalıştığının sorulmasından ve
+                    taşıdığı paketin içinde ne olduğunu öğrenmekten hiç hoşlanmaz. Aldığı son görevde taşıdığı paket de
+                    tıpkı diğerleri gibi bir pakettir.</p>
+                <a href="https://www.youtube.com/watch?v=7FnbLyv2oio&pp=ygUTdHJhbnNwb3J0ZXIgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="korku">
+                <img src="imgs/insidious1.jpg" alt="korku" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Korku Filmi</h3>
+                <p class="text-gray-700 ">Astral yolculuk olarak bilinen fenomeni, ürkütücü biçimde gözler önüne seren
+                    film, genç çift Josh ve Renai'nin, üç çocuklarıyla birlikte yeni bir eve taşınmasıyla başlıyor.
+                    Evde yaşanan tuhaf olaylar, Renai’ye evin hayaletli olduğunu düşündürür ve genç kadın kocasını
+                    taşınmaya zorlar.</p>
+                <a href="https://www.youtube.com/watch?v=zuZnRUcoWos&pp=ygURaW5zaWRpb3VzIHRyYWlsZXI%3D" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="animasyon">
+                <img src="imgs/çılgınhırsız.jpg" alt="animasyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Animasyon Filmi</h3>
+                <p class="text-gray-700 ">Gru adındaki kafası karışık ve kötü yürekli kişinin en büyük hayali dünyanın
+                    uydusu Ay'ı ele geçirmektir. Aslında etrafı barış ve huzurla bezeli, renk renk çiçeklerle çevrili,
+                    güleryüzlü komşuluk ilişkilerinin sürdüğü bu varoş semtinde sükuneti bozan tek olgu Gru'nun bu
+                    hırslı halidir.</p>
+                <a href="https://www.youtube.com/watch?v=zzCZ1W_CUoI&pp=ygUbw6fEsWxnxLFuaMSxcnPEsXogMSB0cmFpbGVy"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="bilimKurgu">
+                <img src="imgs/avengers.jpg" alt="bilimKurgu" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Bilim Kurgu Filmi</h3>
+                <p class="text-gray-700 ">SHIELD adıyla tanınan uluslararası barış örgütünün başındaki isim Nick Fury,
+                    tüm dünyanın güvenliğine karşı büyük bir tehdit oluşturan düşmanla karşı karşıya kalır. Fury,
+                    dünyayı yaklaşan bu felaketten kurtarmak için en cesur ve en 'süper' kahramanlardan oluşan bir ekip
+                    kurmak zorundadır...</p>
+                <a href="https://www.youtube.com/watch?v=eOrNdBpGMv8" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="animasyon">
+                <img src="imgs/arabalar.jpg" alt="animasyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Animasyon Filmi</h3>
+                <p class="text-gray-700 ">Piston Kupası için The King ve Chick Hicks’e karşı yarışmak üzere
+                    Kaliforniya’ya gitmekte olan meşhur yarış arabası Lightning McQueen, kaza ile Radiator Springs
+                    adındaki küçük bir kasabanın yollarına zarar verir. Üstelik kendisinin de tamir olması için çok
+                    çalışması gerekmektedir. Bu sırada bu olayla beraber o kasabada geçirdiği zamanlarda dostluklar
+                    edinir ve gerçek sevgiyi yaşar.</p>
+                <a href="https://www.youtube.com/watch?v=W_H7_tDHFE8&pp=ygUSYXJhYmFsYXIgMSB0cmFpbGVy" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="korku">
+                <img src="imgs/insidious2.jpg" alt="korku" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Korku Filmi</h3>
+                <p class="text-gray-700 ">Lambert ailesi, çocuklarını esir alan şeytan ve ruhlardan kurtulmayı
+                    başardıktan sonra çareyi bulundukları yeri terk edip, oğulları Dalton'ı büyükannesi Lorraine'in
+                    yanına götürmekte bulurlar. Böylece hepsi güvende olacak ve yeni bir sayfa açacaklardır. Ancak
+                    yakalarına yapışan lanet burada da peşlerini bırakmaya niyetli değildir.</p>
+                <a href="https://www.youtube.com/watch?v=fBbi4NeebAk&pp=ygUTaW5zaWRpb3VzIDIgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="bilimKurgu">
+                <img src="imgs/matrix.jpeg" alt="bilimKurgu" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Bilim Kurgu Filmi</h3>
+                <p class="text-gray-700 ">Bir yaşanan gerçek vardır, bir de yaşananın ötesinde olan gerçeklik... Biri
+                    rüya, diğeri ise Matrix! Neo,son derece tehlikeli bir adam olan Morpheus’un gerçeği bildiğine
+                    inanmaktadır. Bir gece Neo, kendisini başka bir dünyaya götürebilecek güzel yabancı Trinity ile
+                    tanışır. Bu kızın götüreceği dünyada, Neo Morpheus’u bulacak ve Matrix hakkında bir şeyler
+                    öğrenecektir. Neo, Tam olarak kavrayamadığı şeylerin yaşamını kontrol ettiğini biliyor..</p>
+                <a href="https://www.youtube.com/watch?v=vKQi3bBA1y8&pp=ygUObWF0cml4IHRyYWlsZXI%3D" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="animasyon">
+                <img src="imgs/buzdevri2.jpg" alt="animasyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Animasyon Filmi</h3>
+                <p class="text-gray-700 ">Kahramanlarımız serinin ikinci filmi ile bir kez daha karşımızda. Manny, Sid
+                    ve Diego, eriyen buzların arasından kurtulup artık daha keyifli, ısınmış bir yaşamın tadına varmaya
+                    hazırlardır. Ayrıca ekibe yeni yüzler de katılmış durumdadır. Dostumuz Manny, bir aile kurmayı çok
+                    ister. Dünyada tek kalan dişi mamut Ellie ile tanıştığında başlangıçta pek de iyi anlaştıkları
+                    söylenemez. Ellie kendini opossum sanmaktadır. Dahası opossum olan iki kardeşi de vardır. Crash ile
+                    Eddie. Eriyen buzlardan ötürü bir an önce vadinin öteki tarafına geçmek zorundadırlar. Bu sırada
+                    meşe palamudu peşindeki Scrat de iş başındadır.</p>
+                <a href="https://www.youtube.com/watch?v=ZCaHI9kaJc0&pp=ygUSYnV6ZGV2cmkgMiB0cmFpbGVy" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/madmax.jpg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Zorlu geçmişi Mad Max’i hayatta kalmak için en iyi yolun yalnız olmak
+                    gerektiğine inandırmıştır. Yine de bir şekilde kendini Furiosa adlı liderlerinin peşinde çorak
+                    topraklardaki savaş ortamından, sürekli kaçarak hayatta kalmaya çalışan bir grubun arasında bulur.
+                    Yaşadıkları ortamı zalimce yöneten Immortan Joe’dan kaçmaktadırlar ve Joe kendisinden çalınan ve
+                    yeri doldurulamayacak derecede önemli kaybının peşindedir. </p>
+                <a href="https://www.youtube.com/watch?v=hEJnMQG9ev8&pp=ygUPbWFkIG1heCB0cmFpbGVy" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="animasyon">
+                <img src="imgs/shrek2.jpg" alt="animasyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Animasyon Filmi</h3>
+                <p class="text-gray-700 ">Kahramanımız Şrek ve Prenses Fiona'nın balayından dönüşüyle başlar.
+                    İlk filmde Şrek türlü kötülüklere karşı olağanca gücüyle ve takdir edilesi bir cesaretle savaşmış,
+                    sonunda da başarılı olmuştu. En önemlisi ise güzeller güzeli prenses Fiona'nın kalbini kazanıp iç
+                    güzelliğinin önemli olduğunu fark etmişti. Mutlu bir yuva kuran ikili, Fiona'nın anne ve babasından
+                    bir yemek daveti aldıklarında büyük bir maceraya atılır.</p>
+                <a href="https://www.youtube.com/watch?v=xBgSfhp5Fxo&pp=ygUPc2hyZWsyICB0cmFpbGVy" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/taşıyıcı2.jpg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Taşıyıcı olan Frank ziyadesi ile yoğun tempoda ve yüksek enerji ile geçen
+                    günlerine bir ara verme gereksinimi duyar. Miami sahillerinde daha sakin işlerle ilgilenmek ister.
+                    Ancak kariyerinin etkisi onu pek bırakacak gibi değildir. Tekrar bir görev altına girmişti ve yeni
+                    bir macera kendisini beklemektedir. </p>
+                <a href="https://www.youtube.com/watch?v=_KFOYFBh2QM&pp=ygUVdHJhbnNwb3J0ZXIgMiB0cmFpbGVy"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+        </div>
+
+    </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

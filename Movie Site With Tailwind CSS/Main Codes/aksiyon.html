@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Aksiyon Filmleri</title>
+</head>
+<body class="bg-gray-100">
+    
+    <nav class="bg-gray-700 text-white flex justify-between items-center p-6">
+        <div class="text-2xl font-bold">🎬 Film Sitesi</div>
+        <div>
+            <a href="anaSayfa.html" class="mx-2 hover:underline">Ana Sayfa</a>
+            <a href="index.html" class="mx-2 hover:underline">Filmler</a>
+            <a href="iletisim.html" class="mx-2 hover:underline">İletişim</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto p-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-7 gap-4 mt-4" id="filmlists">
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/killbill1.jpeg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Eski patronu ve onun suç örgütü tarafından düğününde öldüresiye dövülen, 4 yıl
+                    boyunca komada yatan ''Gelin'' adlı kadının hikayesini konu alıyor.</p>
+                <a href="https://www.youtube.com/watch?v=7kSuas6mRpk&pp=ygUTa2lsbCBiaWxsIDEgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/taşıyıcı1.jpg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Frank, hayatının bir kısmını bir özel operasyon biriminin önemli bir parçası
+                    olarak geçirmiştir. Artık bir paralı askerdir ve hangi görevi beğeniyorsa onu yerine getirmektedir.
+                    Üç adet altın kuralı vardır. Frank, anlaşmanın bozulmasından; kim için çalıştığının sorulmasından ve
+                    taşıdığı paketin içinde ne olduğunu öğrenmekten hiç hoşlanmaz. Aldığı son görevde taşıdığı paket de
+                    tıpkı diğerleri gibi bir pakettir.</p>
+                <a href="https://www.youtube.com/watch?v=7FnbLyv2oio&pp=ygUTdHJhbnNwb3J0ZXIgdHJhaWxlcg%3D%3D"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/madmax.jpg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Zorlu geçmişi Mad Max’i hayatta kalmak için en iyi yolun yalnız olmak
+                    gerektiğine inandırmıştır. Yine de bir şekilde kendini Furiosa adlı liderlerinin peşinde çorak
+                    topraklardaki savaş ortamından, sürekli kaçarak hayatta kalmaya çalışan bir grubun arasında bulur.
+                    Yaşadıkları ortamı zalimce yöneten Immortan Joe’dan kaçmaktadırlar ve Joe kendisinden çalınan ve
+                    yeri doldurulamayacak derecede önemli kaybının peşindedir. </p>
+                <a href="https://www.youtube.com/watch?v=hEJnMQG9ev8&pp=ygUPbWFkIG1heCB0cmFpbGVy" target="_blank"
+                    class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+            <div class="film bg-white shadow-md rounded p-4" data-genre="aksiyon">
+                <img src="imgs/taşıyıcı2.jpg" alt="aksiyon" class=" h-48 w-40 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Aksiyon Filmi</h3>
+                <p class="text-gray-700 ">Taşıyıcı olan Frank ziyadesi ile yoğun tempoda ve yüksek enerji ile geçen
+                    günlerine bir ara verme gereksinimi duyar. Miami sahillerinde daha sakin işlerle ilgilenmek ister.
+                    Ancak kariyerinin etkisi onu pek bırakacak gibi değildir. Tekrar bir görev altına girmişti ve yeni
+                    bir macera kendisini beklemektedir. </p>
+                <a href="https://www.youtube.com/watch?v=_KFOYFBh2QM&pp=ygUVdHJhbnNwb3J0ZXIgMiB0cmFpbGVy"
+                    target="_blank" class="text-blue-500 hover:underline">Fragmanı İzle</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

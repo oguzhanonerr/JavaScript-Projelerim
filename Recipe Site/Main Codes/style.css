@@ -1,0 +1,29 @@
+.slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.photo-slider {
+    display: flex;
+    animation: autoRun 25s linear infinite;
+    animation-delay: calc((25s / var(--quanity))* (var(--position)- 1));
+}
+
+.slider img {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

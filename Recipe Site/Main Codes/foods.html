@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tarifler Örnek</title>
+</head>
+
+<body class="bg-stone-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-5 flex justify-between items-center">
+        <!-- Açılır Menü -->
+        <div class="relative">
+            <button id="menuButton" class="hover:text-green-700 focus:outline-none">
+                ☰
+            </button>
+            <div id="menuDropdown" class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-md hidden">
+                <a href="home.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Ana Sayfa</a>
+                <a href="foods.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Yemekler</a>
+            </div>
+        </div>
+        <!-- Logo -->
+        <a href="home.html"
+            class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-green-500">Derya'nın Dünyası</a>
+    </nav>
+
+    <div class="max-w-4xl mx-auto">
+
+        <h1 class="text-3xl font-bold text-center p-4 mb-4">Yemek Tarifleri</h1>
+
+        <!-- Yemek Detayları -->
+        <div id="detayBolumu" class="bg-white p-4 shadow-md rounded-lg mb-6 text-center">
+            <h2 id="detayBaslik" class="text-2xl font-semibold">Bir yemek seçin</h2>
+            <img id="detayResim" src="" class="mx-auto my-4 hidden" width="200">
+            <p id="detayAciklama" class="text-gray-700">Yemek tarifini görmek için bir yemeğe tıklayın.</p>
+            <button id="kapatDetay" class="mt-4 px-4 py-2 bg-red-500 text-white rounded">Kapat</button>
+        </div>
+
+        <!-- Yemek Listesi -->
+        <div id="yemekListesi" class="grid grid-cols-3 gap-4">
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Arabaşı Çorbası','imgs/arabasi.jpg', 'Çorbanın hamuru için 1 litre kaynamış suyu büyük bir tencereye alın ve ocağı yakın. İçerisine 1 tatlı kaşığı tuz ilave edin. Ayrı bir kapta 1 su bardağı suyun içerisine 1 çay kaşığı tuz ekleyin. Sonra ise 1 su bardağı unu yavaş yavaş suyun içerisine eklerken bir yandan çırpıcı ile de karıştırın. Homojen halde bir krep kıvamına gelen karışımı ocağa koyduğunuz kaynar suyun içerisine yavaşça ekleyin. Eklerken bir yandan hızlıca çırpıcı ile karıştırmayı unutmayın ki topaklanmasın. Hamur karışımı kaynayana dek dek pişirmeye devam edin. Üzerinde minik kabarcıklar görmeye başladığınızda ocağı kapatın. Bir büyük borcamın tabanını su ile ıslatın ve ocaktan aldığınız hamuru borcama dökün. Bu hamuru oda sıcaklığına gelene dek dinlendirin. Sonra ise buzdolabında en az 4-5 saat soğumaya bırakın. Tavuk butlarına tuz ekleyerek 1,5 litre suyun içerisinde düdüklü tencerede haşlayın. İyice haşlanan tavukları küçük parçalara ayırarak didikleyin. Kalan suyu ise çorbada kullanmak için bir kenara ayırın. Çorba için büyük bir tencereye 2 yemek kaşığı tereyağı, 1 yemek kaşığı zeytinyağı ekleyin. Yağlar tamamen eridiğinde unu ekleyip 1-2 dakika un kokusu çıkana dek kavurun. Un kavrulunca 2 tepeleme yemek kaşığı domates salçası, 1 yemek kaşığı biber salçası ve 1 tatlı kaşığı toz acı biber ekleyin ve tekrar kavurun. Salça kavrulunca kenarda beklettiğiniz soğuyan tavuk suyunu ekleyin ve 5-6 dakika bu şekilde kaynatın. Su kaynayınca didiklediğiniz tavukları çorbaya ekleyin, 1-2 dakika daha tavuklar ile beraber çorbayı kaynatın ve hazır! Servis için dinlenmiş ve buzdolabında soğumuş hamurunuzu dilimleyin. Çorbanızı içmeden önce ise mutlaka limon suyu eklemeyi unutmayın. Arabaşı çorbası hazır. Kaşığınızla bir parça hamurdan alın, çorbanın içerisine daldırarak keyfini çıkartın. Afiyet olsun.' )">
+                <img src="imgs/arabasi.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Arabaşı Çorbası</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Baklava', 'imgs/Baklava.png','Baklavanın hamurunu hazırlamak için derin bir kabın içerisinde tereyağı, sıvı yağ, süt, yumurta, sirke, tuz, yoğurt ve suyu birleştirin, güzelce karıştırın. Azar azar un ilave ederek yoğurmaya başlayın, toparlandıktan sonra tezgaha alın ve un ilave ederek ele yapışmayan bir hamur elde edin. Hamuru eşit parçaya bölüp beze haline getirin. Tezgaha bol nişasta serpin ve bezeleri tatlı tabağı büyüklüğünde açın. Tezgahı hafifçe nişastalayın. Ardından bezelerin üzerine nişasta serperek birkaç tanesini üst üste koyup tepsinizin genişliğinde açmaya başlayın. Tüm bezelere aynı işlemi uyguladıktan sonra yufkaları birbirinden ayırın ve bir tanesini tereyağı ile yağlanmış tepsiye serin. Açtığınız yufkaları alt katman ve üstl katman olmak üzere ikiye bölün. İlk katları sermeye başlayın ve aralarına eritilmiş tereyağı sürün. Ortasına fıstığı serin. Diğer katları da çıktıktan ve aralarına eritilmiş tereyağı sürdükten sonra bir bıçak yardımıyla hafifçe karelere bölün. Üzerine de kalan tereyağını ekledikten sonra 195 derece ısıtılmış fırında 10 dakika pişirin. Ardından fırını 180 dereceye indirip 35 dakika daha kontrollü olarak pişirin. Çıkarıp sıcak baklavaya sıcak şerbetini verin. Çektikten sonra üzerine fıstık serpiştirip baklavayı servis edin. Afiyet Olsun.')">
+                <img src="imgs/baklava.png" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Baklava</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Bodrum Mantı', 'imgs/bodrum.jpeg','Yoğurma kabımıza unu ekleyerek unun ortasını havuz şeklinde açarak ortasına yumurtayı kıralım. Daha sonra tuz ve yeteri kadar su ilavesiyle sert kıvamda bir hamur yoğuralım. 10 dakika kadar dinlendirelim. Mantımızın iç harcını hazırlamak için soğanları ince ince kıyarak kıymaya ilave edelim. Üzerine baharatları, tuz ve 1 tutam maydanozu kıyarak ilave edelim. Dinlenen hamurdan açabileceğimiz büyüklükte bezeler yapalım. Un serpilmiş tezgahın üzerinde ince bir şekilde açalım. Küçük kareler şeklinde kestikten sonra karelerin ortasına kıymalı harçtan koyalım. Dört kenarını karşılıklı getirerek bohça şeklinde katlayalım. Hamurlar bitene kadar bu işleme devam edelim. Bir tencereye 1 su bardağı sıvı yağı ekleyerek kızdıralım. Tüketeceğiniz kadar mantıyı kızgın yağın içinde pembeleştirerek kızartıp bir kabın içine alalım. Mantıları servis tabaklarına yayarak üzerine sarımsaklı yoğurt ve kırmızı pul biber serpiştirerek servise sunalım. Afiyet olsun.')">
+                <img src="imgs/bodrum.jpeg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Bodrum Mantı</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Çi Börek','imgs/ciborek.jpg','Bir karıştırma kabının içinde 300 gram kıyma, 1 adet soğan rendesi, 1 tatlı kaşığı karabiber, 1 tatlı kaşığı tuz ve yarım çay bardağı suyu karıştırın. Harcınızın sulu olmasına özen gösterin. Bir kabın içerisinde 1 su bardağı ılık su, 3 su bardağı un, 1 tatlı kaşığı tuz ve 2 tatlı kaşığı üzüm ya da elma sirkesini karıştırın. Orta yumuşaklıkta bir hamur elde edene kadar yoğurun. Hamurunuzu un serptiğiniz tezgaha alıp bezelere ayırın. Bir merdane yardımıyla orta büyüklükte bir tabak boyutunda, incecik açın. Kıymalı harcınızı açtığınız hamura yerleştirip katlayın. Kenarlarının iyice yapışmasını sağlamak için elinizi biraz suya batırarak kenarlarını yapıştırın. Kızmış yağa börekleri atarak arkalı önlü kızartın ve kızaran böreklerinizi fazla yağı emmesi için bir kağıt havlu üzerine alın. çiğ börek hazır. Afiyet olsun.')">
+                <img src="imgs/ciborek.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Çi Börek</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Çıtır Mantı', 'imgs/çıtır.png','Yumurta,su ve tuzu karıştırın ve azar azar unu ekleyin. Bir kaba kıymayı alın. İçine soğanı rendeleyin,maydonozu ince ince kıyın. Baharatını ekleyerek güzelce yoğurun. Hamuru 4 eşit parçaya bölün. İlk bezeyi unlanmış tezgaha alarak açmaya başlayın. İnce bir hamur olmalı. Enine boyuna şeritler keserek kare eş parçalara bölün. Her bir parçaya harcınızdan bir miktar koyun. Dört ucunu bir araya getirerek mantı şeklini verin. Sırasıyla diğer bezeleri de aynı şekilde açın. Hepsine harç koyarak kapatın. Yağınızı tavaya alarak kızmasını bekleyin. Yeterli ısıya geldiğinde mantılarınızı içine alarak önlü arkalı kızartın. Kevgir yardımıyla fazla yağını süzdürerek tavanın içinden kızaran mantılarınızı alın. Küçük bir sos tavasında tereyağını eritin ve bir yemek kaşığı salçayı içine alarak kavurun. Biraz sulandırın, topaklanma olmaması için karıştırın. Mantınızın üstüne önce sarımsaklı yoğurt ardından salçalı sondan gezdirerek servis yapın. Afiyetler olsun.')">
+                <img src="imgs/çıtır.png" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Çıtır Mantı</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Döner','imgs/döner.jpg','İlk olarak soğan, sarımsak ve yoğurdu rondoya alalım ve güzelce çekelim. Daha sonra yoğurma kabına kıyma, soğanlı sarımsaklı yoğurt karışımı, tuz, karabiber, kimyon ve kırmızı toz biberi de alarak en az 5 dakika yoğuralım. İyice özdeşleşen kıyma harcını streç film üzerine alarak sıkıca saralım ve dondurucuya kaldıralım. Donan döner harcımızı buzluktan çıkardıktan sonra 15 dakika kadar hafif çözülmesini bekleyelim. Daha rahat kesebilmek için dilerseniz yarım saat kadar da bekletebilirsiniz. Uygun ve mümkünse büyükçe bir bıçak ile ince ince dilimler keselim. Kestiğimiz dilimler hızlıca çözüleceklerdir çok uzun süre bekletmeden diğer yandan da az yağda pişirmeye başlayalım. Dönerlerimizi sıcak sıcak ister dürüm döner ister pilav üstü döner canınız nasıl istiyorsa servis edebilirsiniz. Afiyet Olsun.')">
+                <img src="imgs/döner.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Döner</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('İçli Köfte','imgs/icli.jpg','Önce bulguru ve irmiği ağzı kapaklı bir kapta sıcak su ile ıslatın ve ağzını kapatıp yaklaşık 30 dakika dinlenmeye bırakın. 200 gram yağı tencereye alın ve kıymayı rengi dönene kadar sürekli karıştırarak pişirin.Kıymanın her yeri renk aldıktan sonra tane tane olması için yarım çay bardağı su ekleyin ve suyunu çekene kadar kavurun. Suyunu çektikten sonra küp küp doğranmış soğanı ilave edip kavurmaya devam edin. Soğanlar tamamen kavrulduktan sonra 2 çay kaşığı tuzu ve baharatları ilave edin.Cevizleri de ilave edip ocağın altını kapatın. Maydanozları ekleyip son kez karıştırıp soğuması için başka bir kaba alın. Şişmeye bıraktığımız bulgurlu karışımı bir tepsiye (varsa çiğ köfte tepsisi) veya bir kaba çıkarın ve üzerine yağ, salça, un, yumurta, pul biber ve 2 çay kaşığı tuzu ekleyip güzelce yoğurun. Yaklaşık 15 dakika yoğurduktan sonra bütün hamuru bir araya getirin ve üzerini nemli bir bezle örtün. Yaklaşık 30 dakika dinlendirin. Hamurunuzdan cevizden büyük yumurtadan küçük parçalar alıp yuvarlayın. Baş veya işaret parmağınızla açıp içine harç doldurup kapatın. Tüm köftelere aynı boyutlarda açıp içlerini doldurun. Kızgın yağda kızartın. Dilerseniz suda da haşlayabilirsiniz. İçli köfte hazır. Afiyet olsun.')">
+                <img src="imgs/icli.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">İçli Köfte</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Kebap','imgs/kebap.jpg','Kebap için kıymaya pul biberini ekleyin ve 15 dakika yoğurun. Sonrasında tuz, kapya biber ve tereyağını da ekleyip 5 dakika daha yoğurmaya devam edin. Yoğururken ara ara elinizi ıslatın. Böylelikle yoğurma işlemi daha kolay olacaktır. Homojen bir kıvama gelene kadar yoğurun. Kıvam alan kıymadan parçalar koparıp çöp şişlere geçirin. Süre sonunda Adana kebabı ister fırında, isterseniz de tava da pişirebilirsiniz. Fırında pişireceksiniz 180 derecede önceden ısıtılmış fırında 20 dakika kadar ters yüz ederek pişirebilirsiniz. Dilerseniz pişirme kağıdı serili bir fırın tepsisinde ya da fırın ızgarası üzerinde pişirebilirsiniz. Kebabı yanında bol garnitür ve ayranla servis edebilirsiniz. Afiyet olsun.')">
+                <img src="imgs/kebap.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Kebap</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Köfte','imgs/köfte.jpg','Köftelik kıymayı derince bir kaba alın, rendelenmiş ve suyu sıkılmış soğanı ekleyin. Ardından ince doğranmış maydanoz, galeta unu, yumurta, süt ve baharatları ekleyin. Köftenin harcını güzelce yoğurun. Buzdolabında en az 1 saat dinlendirin. Yoğurduğunuz harçtan ceviz büyüklüğünde parçalar koparıp avucunuzda şekillendirerek köfteleri hazırlayın. Bir tavaya aldığınız ve kızdırdığınız yağda, hazırladığınız köfteleri arkalı önlü olarak pişirin. Köfteleri bir tabağa alıp sıcak sıcak servis edin. Afiyet olsun')">
+                <img src="imgs/köfte.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Köfte</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Künefe','imgs/kunefe.jpg','Sıcak künefenin üzerine gezdireceğiniz soğumuş şerbeti hazırlamak için; toz şeker ve suyu tencereye alın. Ocağa aldığınız şerbet karışımını aralarda karıştırarak kısık ateşte kaynatın. Yaklaşık 20-25 dakika kadar kaynayan ve kıvam alan şerbete limon suyu ekleyip karıştırdıktan sonra ocaktan alın. Soğuması için bir kenarda bekletin. Tel kadayıfı geniş bir kaba alın. Elinizle tel tel açıp küçük parçalar haline getirin. Erittiğiniz tereyağını kattıktan sonra kadayıf tellerini açmaya devam ederek tereyağını kadayıflara yedirin. Pişirme işlemini gerçekleştireceğiniz küçük boy yuvarlak tepsileri ya da tavayı tereyağıyla yağlayın. Tereyağlı kadayıf karışımının yarısını pişirme tepsisinin tabanına bastırarak döşeyin. Suyunu süzdürdükten sonra rendelenmiş peyniri kadayıfların üzerine boşluk kalmayacak şekilde serpiştirin. Kalan tereyağlı kadayıf karışımıyla peynirlerin üzerini bastırarak kaplayın. Künefe tepsilerini ocağın üzerine alın. Tepsiyi ocak üzerinde gezdirerek künefeyi kısık ateşte pişirin. Taban kısmı renk alan künefeyi, geniş bir tabak yardımıyla ters çevirerek tekrar ocağa alın. Aynı şekilde pişirerek diğer tarafının da kızarmasını sağlayın. Ocaktan almak üzere olduğunuz nar gibi kızaran künefenin üzerine ılık şerbeti gezdirdikten sonra ocaktan alın. Kısa bir süre dinlenen ve şerbetini çeken künefeyi, dilimledikten servis ediniz. Afiyet Olsun')">
+                <img src="imgs/kunefe.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Künefe</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Lahmacun','imgs/lahmac.jpg','Lahmacun için önce mutfak robotuna kırmızı biberleri, yeşil biberleri, soğanları ve domatesleri ilave edin tamamen püre haline gelmeyecek şekilde çekin, Maydanozları da ekleyin ve 10 saniye kadar daha çekin. Domates salçası, biber salçası, sıvı yağ ve suyu ekleyin. Son olarak kıymayı ekleyerek güzelce yoğurun.Lahmacunun lezzetli olması için harcınızın cıvık bir kıvamda olması gerekir. Yeteri kadar cıvık bir kıvamda değilse, biraz su ekleyebilirsiniz. Hazırladığınız harcı vaktiniz varsa bir süre buzdolabında dinlendirin. Harcınız dinlenirken, hamurunuzu yapmaya başlayın. Suyu bir kaba dökün, üzerine tuz ve şekeri ilave ederek güzelce karıştırın. Azar azar da un ilave edin. Orta sertliğe ulaşana dek yoğurun. Hamuru bir silindir haline getirip eşit parçalara bölün. Aynı büyüklükte lahmacunlar yapabilmek için hamurlarınızın ağırlığı da eşit olmalıdır. Hazırladığınız bezeleri yemek tabağı büyüklüğünde açın. Mümkün olduğu kadar ince açmanız önemlidir. Fırınınızı 250 derece fanlı ve alt-üst açık olacak şekilde açın. Açtığınız hamurların üzerine kıymalı harcı yayın. Fırının tabanına yağlı kağıt ile birlikte yerleştirin ve 7-10 dakika altı kızarana kadar pişirin. Sumaklı soğan, maydanoz ve bol limonla servis edin. Afiyet olsun.')">
+                <img src="imgs/lahmac.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Lahmacun</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Kayseri Mantısı','imgs/mantı1.jpg','  Hamur için,yumurta ve suyu çırpın azar azar unu ilave edin. Ele yapışmayacak kıvama gelene kadar yoğurun. O sırada harcı hazırlayın.Bütün malzemeleri bir araya getirin ve güzelce karıştırın. Hamuru ceviz büyüklüğünde küçük bezelere bölün,merdane ya da oklava yardımıyla ince olacak şekilde açın. Enine ve boyuna şeritler halinde kesin. Küçük karelerin içine harçtan koyun. Zarf şeklinde sıkıca kapatın. Derin bir tencerede suyunuzu kaynatın.Kaynayan suyun içine bir damla yağ ve tuz ekledikten sonra mantıklarınızı içine atın. Sevdiğiniz yumuşaklığa gelene kadar pişirin. Sarımsaklı yoğurt ve kızdırılmış yağ ile servis edin Afiyet olsun.')">
+                <img src="imgs/mantı1.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Kayseri Mantı</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Sosyete Mantı','imgs/sosyete.jpg','İç harcı için; bir kaba kıymayı alın ve üstüne soğanı rendeleyin. Tuz ve karabiberi de ilave edip güzelce karıştırın. Yufkanızın bir tanesini alın, tezgaha serin ve bir bıçak yardımıyla 4’e kesin. Tereyağını eritin, ılıklaşmasını bekleyin ve içine yumurtayı ekleyip, bir çatal yardımıyla güzelce çırpın. Kestiğiniz her bir yufka parçasına, bir fırça yardımıyla, hazırladığınız yumurtalı karışımdan sürün. Kestiğiniz yufka parçasının geniş kenarına hazırladığınız harçtan bir sıra halinde koyun ve sıkı sıkı rulo yaparak, üçgen köşesine doğru sarın. Hazırladığınız ruloyu, bir ucundan kıvırarak kendi etrafında döndürün. Böylece bir spiral şekli elde edeceksiniz. Pişerken açılmaması için bir kürdan yardımıyla tutturun ve yağlı kağıt serdiğiniz bir fırın tepsisine dizin. Üstlerine de hazırladığınız yumurtalı karışımdan sürün. Bu şekilde tüm yufkaları ve iç harcı bitirin. Önceden ısıtılmış 170 derece fırında, üstleri kızaran dek, yaklaşık 25 dakika pişirin. Mantılar pişerken sosunu hazırlayın. Yoğurdu bir kaba alın, içine sarımsağı rendeleyin. Küçük bir tavada salçayı yağ ile açın ve 2-3 dakika kadar kavurun. Mantılar fırından çıkınca sıcak sıcak servis tabağına alın. Üstlerine önce sarımsaklı yoğurt, ardından da salçalı yağı gezdirin ve servis edin Afiyet olsun.')">
+                <img src="imgs/sosyete.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Sosyete Mantı</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Tantuni','imgs/tantuni.jpeg','Mersin usulü tantuni için etlerin varsa fazla yağlı kısımlarını temizleyip ince dilimler halinde doğrayın. Üzerini geçecek kadar soğuk su ilavesiyle suyunu çekene kadar haşlayın. Sac tavayı ocakta kızdırın. Pamuk yağını tavaya dökün ve haşlamış olduğunuz etleri de üzerine ilave edin. Toz biberi de ekleyerek karıştırın. Suyu yavaş yavaş ilave ederek, suyunu çekene kadar pişirin. Pişen tantuniyi sandviç ekmeği ve lavaşın içerisine yerleştirin. İsteğe göre doğranmış domates, soğan ve maydanoz ilavesi yapın. Afiyet olsun.')">
+                <img src="imgs/tantuni.jpeg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Tantuni</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Kayseri Yağlaması','imgs/yaglama.jpg','Kayseri yağlamasının hamurunun yapımı için bir kabın içine unu alın ve ortasına bir havuz açın. Ilık süt, maya, sıvı yağ, tuz ve şekeri ilave ederek karıştırın. Ilık suyu azar azar ilave ederek hamuru yoğurun. Temiz bir kabın içine hafifçe un serpin ve hazırladığınız hamuru içine aktarın. Üzerini streç film ile kapatarak oda sıcaklığında iki katına çıkana kadar yaklaşık 40 dakika kadar mayalandırmaya bırakın. Bezeler haline getirin ve üzerini bir bezle kapatarak 10 dakika mayalanmaya bırakın. Soğanları küp küp doğrayın. Bir tavanın içine kıymaları alın hafifçe soteleyin. Ardından içine soğanları ilave edin ve kavurun. Soğanlar kavurulunca içine rendelenmiş domatesleri ilave edin. Salçasını da ilave edin ve pişmeye bırakın. Ardından azar azar su ilave edin, tuz ve karabiberini ekleyin. Bu şekilde 5-6 dakika daha pişirdikten sonra ocaktan alın. Oklava yardımıyla hafif unlayarak bezeleri tek tek açın. Yapışmaz bir tavayı ocağın üzerine alın ve iyice ısıtın. Isınan tavaya açtığınız hamurları tek tek aktarın ve arkalı önlü pişirin. Tüm hamura aynı işlemi uygulayın. Tüm yufkaları pişirdikten sonra bir pişmiş yufka ardından hazırladığınız kıymalı iç, ardından tekrar yufka sıralamasıyla kat çıkın. Tüm iç harç ve yufkalar bittiğinde üzerini ince kıyılmış maydanozla süsleyin ve Kayseri yağlamasını dilimleyerek servis edin. Dilerseniz Kayseri yağlamasının üzerine yoğurtlu sarımsaklı sos da gezdirebilirsiniz. Afiyet olsun.')">
+                <img src="imgs/yaglama.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Kayseri Yağlaması</h3>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-lg cursor-pointer text-center"
+                onclick="detaylar('Yaprak Sarması','imgs/yaprak.jpg','Zeytinyağlı yaprak sarmanın iç harcını hazırlamak için; yarım su bardağı zeytinyağını geniş tabanlı bir tencerede kızdırın. 3 adet rendelenmiş soğanı hafif renk alana kadar kavurun. Ardından üzerine 1,5 yemek kaşığı dolmalık fıstığı da  koyup kavurmaya devam edin. Ilık suda 5 dakika kadar bekletip suyunu süzdürdüğünüz 1,5 su bardağı pirinci soğanlarla birlikte, pirinçler şeffaf bir görünüm kazanana kadar kavurun. Ardından sırasıyla; 1 yemek kaşığı kuş üzümü, 1er çay kaşığı tuz, karabiber, yenibahar ve tarçın ekleyip karıştırın. Yaklaşık 1 su bardağı sıcak suyu da ilave edin ve iç harcı kısık ateşte 5 dakika kadar pişirdikten sonra ocaktan alın. Salamura asma yapraklarını tezgahın üzerinde damarlı kısımları üstte kalacak şekilde açın. Her bir yaprağın orta kısmına; hazırlayıp, ılıttığınız iç harçtan birer tatlı kaşığı kadar paylaştırın. Kenar kısımlarını içe alıp, geniş kısmından uç kısmına doğru ilerleyin. Tüm yaprakları sıkı bir şekilde sarın. Sarma tenceresinin tabanını birkaç adet asma yaprağı ile kaplayın. Hazırladığınız yaprak sarmaları, sıra halinde, yan yana dizin. Limonu halka halka dilimledikten sonra sarmaların üzerine yerleştirin. Pişme esnasında açılmamaları için; üzerlerine düz bir servis tabağı kapatın. 1,5 su bardağı sıcak su ve 2 yemek kaşığı zeytinyağını da tencereye ekledikten sonra sarmaları, kısık ateşte yaklaşık 35 dakika pişirin. Afiyet olsun.')">
+                <img src="imgs/yaprak.jpg" class="mx-auto mb-2" width="100">
+                <h3 class="text-lg font-semibold">Yaprak Sarması</h3>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

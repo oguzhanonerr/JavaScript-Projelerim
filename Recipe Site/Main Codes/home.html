@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Yemek Sitesi Örnek</title>
+</head>
+
+<body class="bg-stone-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-5 flex justify-between items-center f">
+        <!-- Açılır Menü -->
+        <div>
+            <button id="menuButton" class="hover:text-green-700 focus:outline-none">
+                ☰
+            </button>
+        </div>
+
+        <div id="menuDropdown" class="absolute left-2 mt-30 w-40 bg-white  shadow-md rounded-md hidden">
+            <a href="home.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Ana Sayfa</a>
+            <a href="foods.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100">Yemekler</a>
+        </div>
+        <!-- Logo -->
+        <a href="home.html"
+            class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-green-500">Logo</a>
+    </nav>
+
+    <header class="bg-linear-to-r from-violet-400 to-fuchsia-400 text-white text-center p-7">
+        <h1 class="text-4xl font-bold">Türk Mutfağının Eşsiz Dünyasına Hoşgeldiniz</h1>
+        <a href="foods.html" class="mt-2 text-lg">En Güzel Yemeklerin Tarifini Öğren</a>
+    </header>
+
+
+    <!-- Sonsuz Kaydırmalı Resimler -->
+    <div class="slider mt-25">
+        <div class="photo-slider">
+            <img src="imgs/mantı1.jpg" alt="mantı">
+            <img src="imgs/arabasi.jpg" alt="mantı">
+            <img src="imgs/kebap.jpg" alt="kebap">
+            <img src="imgs/bodrum.jpeg" alt="mantı">
+            <img src="imgs/sosyete.jpg" alt="mantı">
+            <img src="imgs/yaglama.jpg" alt="yaglama">
+            <img src="imgs/döner.jpg" alt="doner">
+            <img src="imgs/Baklava.png" alt="baklava">
+            <img src="imgs/lahmac.jpg" alt="mantı">
+            <img src="imgs/tantuni.jpeg" alt="tantuni">
+            <img src="imgs/köfte.jpg" alt="köfte">
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
