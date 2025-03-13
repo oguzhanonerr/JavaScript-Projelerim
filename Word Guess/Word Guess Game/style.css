@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url("./imgs/anıtkabir.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.container {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 30px;
+    color: #f7db9a;
+    letter-spacing: 0.5px;
+    text-shadow: 
+    -1px -1px 0 #120d01,
+    1px -1px 0 #120d01,
+    -1px 1px 0 #120d01,
+    1px 1px 0 #120d01;
+}
+
+.jumbotron {
+    background: rgba(41, 33, 3, 0.8);
+    border: 2px solid #f9e4b2;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 50px;
+    color: #b1f9c0;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #b1f9e3;
+    animation: blink linear 2s infinite;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+h6 {
+    font-size: 20px;
+    line-height: 150%;
+}
+
+#currentWord {
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #f9c0b1;
+}
+
+.varColor {
+    color: #b1c6f9;
+}
+
+.noBlink {
+    visibility: hidden;
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
